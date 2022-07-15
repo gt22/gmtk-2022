@@ -27,9 +27,7 @@ public class AspectScript : MonoBehaviour
 
     private void AddResources()
     {
-        // TODO
-        //manager.QueueIncome();
-        // new ResourceStack(resourceGenerationType, resourceGenerateAmount);
+        manager.QueueIncome(resourceGenerationType.Stack(resourceGenerateAmount));
     }
 
     private void AspectTurnEndEffects()

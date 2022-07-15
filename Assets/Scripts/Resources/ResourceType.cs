@@ -6,4 +6,14 @@ namespace Resources
         MANPOWER,
         SUPPLIES
     }
+
+    public static class ResourceTypeMethods
+    {
+        public static ResourceStack Stack(this ResourceType type, int amount)
+        {
+            var res = new ResourceStack();
+            res[type] = amount;
+            return res;
+        }
+    }
 }

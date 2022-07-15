@@ -9,11 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-<<<<<<< HEAD
-
-=======
 UserSettings
->>>>>>> 06d8d6aabe0f21cd6d416717ff0a9662c2be5cef
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
@@ -63,3 +59,4 @@ sysinfo.txt
 crashlytics-build.properties
 
 .idea
+Assets/Plugins/Sirenix.meta/Demos

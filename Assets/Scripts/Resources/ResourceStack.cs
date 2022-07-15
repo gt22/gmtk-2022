@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 
 namespace Resources
 {
@@ -11,20 +10,20 @@ namespace Resources
 
         public int Materials
         {
-            get => _resources[ResourceType.MATERIALS];
-            set => _resources[ResourceType.MATERIALS] = value;
+            get => this[ResourceType.MATERIALS];
+            set => this[ResourceType.MATERIALS] = value;
         }
         
         public int Manpower
         {
-            get => _resources[ResourceType.MANPOWER];
-            set => _resources[ResourceType.MANPOWER] = value;
+            get => this[ResourceType.MANPOWER];
+            set => this[ResourceType.MANPOWER] = value;
         }
         
         public int Supplies
         {
-            get => _resources[ResourceType.SUPPLIES];
-            set => _resources[ResourceType.SUPPLIES] = value;
+            get => this[ResourceType.SUPPLIES];
+            set => this[ResourceType.SUPPLIES] = value;
         }
 
         public ResourceStack()
@@ -33,6 +32,11 @@ namespace Resources
             {
                 _resources[type] = 0;
             }
+        }
+        public int this[ResourceType type]
+        {
+            get => _resources[type];
+            set => _resources[type] = value;
         }
 
         public bool Contains(ResourceStack other)
