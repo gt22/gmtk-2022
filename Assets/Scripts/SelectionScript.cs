@@ -78,8 +78,8 @@ public class SelectionScript : MonoBehaviour
         _hoverState = HoverState.Selected;
 
         if (prev == null) return;
-        prev.GetComponent<SelectionController>()?.DisableSelectedOutline();
-        prev.GetComponent<SelectionController>()?.DeselectUnit();
+        prev.GetComponent<SelectionScript>()?.DisableSelectedOutline();
+        prev.GetComponent<SelectionScript>()?.DeselectUnit();
     }
 
     private void Select()
