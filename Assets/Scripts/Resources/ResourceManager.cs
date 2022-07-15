@@ -1,10 +1,10 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Resources
 {
-    public class ResourceManager //TODO: MonoBehaviour?, integrate with unity
+    public class ResourceManager : MonoBehaviour
     {
-
         public readonly ResourceStack PlayerResources = new();
 
         private readonly List<ResourceStack> _incomeQueue = new();
@@ -27,6 +27,7 @@ namespace Resources
             {
                 totalIncome.PourFrom(income);
             }
+
             totalIncome.PourFrom(PlayerResources);
             DisplayChange(totalIncome);
         }
@@ -35,6 +36,5 @@ namespace Resources
         {
             //TODO: Display
         }
-
     }
 }

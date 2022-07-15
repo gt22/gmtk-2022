@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 446696185}
   - component: {fileID: 446696188}
   - component: {fileID: 446696189}
+  - component: {fileID: 446696190}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -349,6 +350,21 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 0e1be384cbfc49e448b78a3ccfc76db1, type: 3}
   selectedSprite: {fileID: 21300000, guid: 590775e261500fa4db1d7089661ba160, type: 3}
   hoverSprite: {fileID: 21300000, guid: 590775e261500fa4db1d7089661ba160, type: 3}
+--- !u!114 &446696190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446696184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5bb505c903854abf1e1785faa59d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 983932402}
+  resourceGenerationType: 0
+  resourceGenerateAmount: 1
 --- !u!1 &471755721
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +377,7 @@ GameObject:
   - component: {fileID: 471755724}
   - component: {fileID: 471755723}
   - component: {fileID: 471755725}
+  - component: {fileID: 471755726}
   m_Layer: 0
   m_Name: Big forest
   m_TagString: Untagged
@@ -913,6 +930,21 @@ PolygonCollider2D:
       - {x: -7.8260875, y: 2.7693763}
       - {x: -7.8638945, y: 2.8071835}
       - {x: -7.920605, y: 2.78828}
+--- !u!114 &471755726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471755721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5bb505c903854abf1e1785faa59d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 983932402}
+  resourceGenerationType: 0
+  resourceGenerateAmount: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1076,7 @@ GameObject:
   - component: {fileID: 579735510}
   - component: {fileID: 579735512}
   - component: {fileID: 579735511}
+  - component: {fileID: 579735513}
   m_Layer: 0
   m_Name: 'Volcano '
   m_TagString: Untagged
@@ -1433,6 +1466,21 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 83a6150302e1a0c48a8b522ddc42780d, type: 3}
   selectedSprite: {fileID: 21300000, guid: adb90444929a2dc4ebba44c78210d3e8, type: 3}
   hoverSprite: {fileID: 21300000, guid: adb90444929a2dc4ebba44c78210d3e8, type: 3}
+--- !u!114 &579735513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579735507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5bb505c903854abf1e1785faa59d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 983932402}
+  resourceGenerationType: 0
+  resourceGenerateAmount: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1604,7 @@ GameObject:
   - component: {fileID: 680181070}
   - component: {fileID: 680181069}
   - component: {fileID: 680181071}
+  - component: {fileID: 680181072}
   m_Layer: 0
   m_Name: Clouds
   m_TagString: Untagged
@@ -1807,6 +1856,21 @@ PolygonCollider2D:
       - {x: -5.935728, y: 11.899812}
       - {x: -5.57656, y: 12.25898}
       - {x: -5.57656, y: 12.3534975}
+--- !u!114 &680181072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680181067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5bb505c903854abf1e1785faa59d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 983932402}
+  resourceGenerationType: 0
+  resourceGenerateAmount: 1
 --- !u!1 &983932398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1882,7 @@ GameObject:
   - component: {fileID: 983932399}
   - component: {fileID: 983932400}
   - component: {fileID: 983932401}
+  - component: {fileID: 983932402}
   m_Layer: 0
   m_Name: = Environment
   m_TagString: Untagged
@@ -1870,6 +1935,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84dd4146556274b458ae254590c69ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callTurnBeginOnAwake: 1
+--- !u!114 &983932402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983932398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9003ce36794141808169be1b39a1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1175907711
@@ -1968,6 +2046,7 @@ GameObject:
   - component: {fileID: 1216317540}
   - component: {fileID: 1216317542}
   - component: {fileID: 1216317543}
+  - component: {fileID: 1216317544}
   m_Layer: 0
   m_Name: Ocean
   m_TagString: Untagged
@@ -2244,6 +2323,21 @@ PolygonCollider2D:
       - {x: -0.5671078, y: -11.805294}
       - {x: -0.37807184, y: -11.691872}
       - {x: -0.20793952, y: -11.57845}
+--- !u!114 &1216317544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216317539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5bb505c903854abf1e1785faa59d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 983932402}
+  resourceGenerationType: 0
+  resourceGenerateAmount: 1
 --- !u!1 &1704959705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,6 +2418,7 @@ GameObject:
   - component: {fileID: 1905448896}
   - component: {fileID: 1905448898}
   - component: {fileID: 1905448899}
+  - component: {fileID: 1905448900}
   m_Layer: 0
   m_Name: Mines
   m_TagString: Untagged
@@ -2481,3 +2576,18 @@ PolygonCollider2D:
       - {x: 11.739131, y: -1.9754255}
       - {x: 12.003781, y: -1.9187146}
       - {x: 12.325142, y: -2.1455576}
+--- !u!114 &1905448900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905448895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5bb505c903854abf1e1785faa59d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 983932402}
+  resourceGenerationType: 0
+  resourceGenerateAmount: 1
