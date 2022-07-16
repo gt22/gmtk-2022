@@ -23,6 +23,8 @@ public class SelectionScript : MonoBehaviour
     [ShowInInspector, ReadOnly, FoldoutGroup("Debug Info")]
     private bool _hasActionCard;
 
+    [ShowInInspector, ReadOnly, FoldoutGroup("Debug Info")]
+    private bool _isMouseOver;
 
     private SpriteRenderer _renderer;
     private ActionCardHandler _cardHandler;
@@ -62,6 +64,7 @@ public class SelectionScript : MonoBehaviour
 
     public void _OnMouseExit()
     {
+        _isMouseOver = false;
         if (_hoverState == HoverState.Highlighted)
         {
             DisableHoverOutline();
@@ -71,6 +74,7 @@ public class SelectionScript : MonoBehaviour
 
     public void _OnMouseEnter()
     {
+        _isMouseOver = true;
         if (_hoverState == HoverState.None)
         {
             EnableHoverOutline();
@@ -115,7 +119,7 @@ public class SelectionScript : MonoBehaviour
                 Select();
                 break;
             case HoverState.Selected:
-                DeselectUnit();
+                if (_isMouseOver) DeselectUnit();
                 break;
         }
     }
