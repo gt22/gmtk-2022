@@ -7,9 +7,16 @@ namespace UI
 {
     public class ResourceUpdater : MonoBehaviour
     {
-        [FoldoutGroup("References")] public TextMeshProUGUI manpowerText;
-        [FoldoutGroup("References")] public TextMeshProUGUI materialsText;
-        [FoldoutGroup("References")] public TextMeshProUGUI suppliesText;
+        [FoldoutGroup("References"), SerializeField]
+        public TextMeshProUGUI manpowerText;
+
+        [FoldoutGroup("References"), SerializeField]
+        public TextMeshProUGUI materialsText;
+
+        [FoldoutGroup("References"), SerializeField]
+        public TextMeshProUGUI suppliesText;
+
+        public TextMeshProUGUI testText;
 
         private void OnEnable()
         {

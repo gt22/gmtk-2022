@@ -2582,6 +2582,7 @@ MonoBehaviour:
   manpowerText: {fileID: 864433414}
   materialsText: {fileID: 1619937747}
   suppliesText: {fileID: 35890168}
+  testText: {fileID: 1286322352}
 --- !u!1 &1023754335
 GameObject:
   m_ObjectHideFlags: 0
