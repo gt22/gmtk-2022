@@ -16,8 +16,6 @@ namespace UI
         [FoldoutGroup("References"), SerializeField]
         public TextMeshProUGUI suppliesText;
 
-        public TextMeshProUGUI testText;
-
         private void OnEnable()
         {
             ResourceManager.OnUpdateResources += UpdateText;

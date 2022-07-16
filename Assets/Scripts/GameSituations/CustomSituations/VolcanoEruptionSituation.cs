@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class VolcanoEruptionSituation : MonoBehaviour
+namespace GameSituations.CustomSituations
 {
-    // Start is called before the first frame update
-    void Start()
+    public class VolcanoEruptionSituation : MonoBehaviour, ICustomGameSituation
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void SituationEffects()
+        {
+            Debug.Log("Volcano Eruption");
+        }
     }
 }

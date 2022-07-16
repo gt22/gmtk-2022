@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class OceanInvasionSituation : MonoBehaviour
+namespace GameSituations.CustomSituations
 {
-    // Start is called before the first frame update
-    void Start()
+    public class OceanInvasionSituation : MonoBehaviour, ICustomGameSituation
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void SituationEffects()
+        {
+            Debug.Log("Ocean Invasion");
+        }
     }
 }
