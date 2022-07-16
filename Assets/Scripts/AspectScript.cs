@@ -1,3 +1,4 @@
+using GameSituations;
 using Global;
 using Resources;
 using Sirenix.OdinInspector;
@@ -8,6 +9,8 @@ public class AspectScript : MonoBehaviour
     [FoldoutGroup("References"), SerializeField, ShowInInspector]
     private ResourceManager manager;
 
+    private AspectSituationController situationController;
+
     [FoldoutGroup("Resources")] public ResourceType resourceGenerationType;
 
     [FoldoutGroup("Resources")] public int resourceGenerateAmount = 1;
@@ -17,12 +20,15 @@ public class AspectScript : MonoBehaviour
 
     private void OnEnable()
     {
+        TurnHandler.OnTurnBegin += AspectTurnBeginEffect;
         TurnHandler.OnTurnEnd += AspectTurnEndEffects;
+        situationController = GetComponent<AspectSituationController>();
     }
 
     private void OnDisable()
     {
         TurnHandler.OnTurnEnd -= AspectTurnEndEffects;
+        TurnHandler.OnTurnBegin -= AspectTurnBeginEffect;
     }
 
     private void AddResources()
@@ -31,8 +37,14 @@ public class AspectScript : MonoBehaviour
             manager.QueueIncome(resourceGenerationType.Stack(resourceGenerateAmount));
     }
 
+    private void AspectTurnBeginEffect()
+    {
+        situationController.TurnUpdate();
+    }
+
     private void AspectTurnEndEffects()
     {
+        situationController.NextSituation.SituationEffect();
         AddResources();
     }
 }

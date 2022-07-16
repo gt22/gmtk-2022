@@ -11,22 +11,19 @@ namespace GameSituations
         private void OnEnable()
         {
             _turnsToTrigger = turnsUntilTrigger;
-            TurnHandler.OnAfterTurnEnd += ReduceTurns;
         }
 
-        private void OnDisable()
+        public bool IsReady()
         {
-            TurnHandler.OnAfterTurnEnd -= ReduceTurns;
+            return _turnsToTrigger == 0;
         }
 
-        private void ReduceTurns()
+        public void TurnEnd()
         {
             _turnsToTrigger--;
-            if (_turnsToTrigger == 0)
-                SituationEffect();
         }
 
-        private void SituationEffect()
+        public void SituationEffect()
         {
             GetComponent<ICustomGameSituation>().SituationEffects();
         }
