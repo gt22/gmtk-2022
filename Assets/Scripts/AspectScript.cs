@@ -27,13 +27,12 @@ public class AspectScript : MonoBehaviour
 
     private void AddResources()
     {
-        manager.QueueIncome(resourceGenerationType.Stack(resourceGenerateAmount));
+        if (_canGenerateResources)
+            manager.QueueIncome(resourceGenerationType.Stack(resourceGenerateAmount));
     }
 
     private void AspectTurnEndEffects()
     {
-        Debug.Log($"{gameObject.name} received TurnEnd call!", this);
-
         AddResources();
     }
 }

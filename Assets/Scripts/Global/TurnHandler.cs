@@ -7,6 +7,7 @@ namespace Global
     public class TurnHandler : MonoBehaviour
     {
         public bool callTurnBeginOnAwake = true;
+        public bool callTurnBeginAfterEnd = true;
 
         public static event Action OnBeforeTurnBegin;
         public static event Action OnTurnBegin;
@@ -17,7 +18,8 @@ namespace Global
 
         private void Awake()
         {
-            BeginTurn();
+            if (callTurnBeginOnAwake)
+                BeginTurn();
         }
 
         [Button("Test Begin Turn"), BoxGroup("Testing")]
@@ -45,6 +47,10 @@ namespace Global
 
             OnTurnEnd?.Invoke();
             OnAfterTurnEnd?.Invoke();
+            _turnInProgress = false;
+
+            if (callTurnBeginAfterEnd)
+                BeginTurn();
         }
     }
 }

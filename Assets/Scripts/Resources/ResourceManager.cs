@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Global;
 using UnityEngine;
 
 namespace Resources
@@ -8,6 +10,18 @@ namespace Resources
         public readonly ResourceStack PlayerResources = new();
 
         private readonly List<ResourceStack> _incomeQueue = new();
+
+        public static event Action<ResourceStack> OnUpdateResources;
+
+        private void OnEnable()
+        {
+            TurnHandler.OnAfterTurnEnd += EndTurn;
+        }
+
+        private void OnDisable()
+        {
+            TurnHandler.OnAfterTurnEnd -= EndTurn;
+        }
 
         public void QueueIncome(ResourceStack income)
         {
@@ -28,13 +42,12 @@ namespace Resources
                 totalIncome.PourFrom(income);
             }
 
-            totalIncome.PourFrom(PlayerResources);
-            DisplayChange(totalIncome);
+            ModifyResources(totalIncome);
         }
 
         public void DisplayChange(ResourceStack s)
         {
-            //TODO: Display
+            OnUpdateResources?.Invoke(s);
         }
     }
 }
