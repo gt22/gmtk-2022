@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using UI;
 using UnityEngine;
 
 public class SelectionScript : MonoBehaviour
@@ -10,16 +11,27 @@ public class SelectionScript : MonoBehaviour
         Selected
     }
 
+    public bool showActionCard = true;
+
     public Sprite defaultSprite;
     public Sprite selectedSprite;
     public Sprite hoverSprite;
 
-    [ShowInInspector, ReadOnly] private HoverState _hoverState = HoverState.None;
+    [ShowInInspector, ReadOnly, FoldoutGroup("Debug Info")]
+    private HoverState _hoverState = HoverState.None;
+
+    [ShowInInspector, ReadOnly, FoldoutGroup("Debug Info")]
+    private bool _hasActionCard;
+
 
     private SpriteRenderer _renderer;
+    private ActionCardHandler _cardHandler;
 
     private void Start()
     {
+        _cardHandler = GetComponent<ActionCardHandler>();
+        _hasActionCard = _cardHandler;
+
         _renderer = GetComponent<SpriteRenderer>();
     }
 
@@ -70,6 +82,8 @@ public class SelectionScript : MonoBehaviour
     {
         DisableSelectedOutline();
         _hoverState = HoverState.None;
+
+        if (showActionCard && _hasActionCard) _cardHandler.Hide();
     }
 
     private void HandlePrev(GameObject prev)
@@ -77,7 +91,7 @@ public class SelectionScript : MonoBehaviour
         EnableSelectedOutline();
         _hoverState = HoverState.Selected;
 
-        if (prev == null) return;
+        if (prev == null || prev == gameObject) return;
         prev.GetComponent<SelectionScript>()?.DisableSelectedOutline();
         prev.GetComponent<SelectionScript>()?.DeselectUnit();
     }
@@ -88,10 +102,13 @@ public class SelectionScript : MonoBehaviour
 
         var previous = GlobalSelectablesController.Select(gameObject);
         HandlePrev(previous);
+
+        if (showActionCard && _hasActionCard) _cardHandler.Show();
     }
 
     public void _OnMouseClick()
     {
+        //Debug.Log($"{gameObject.name}: {_hoverState}", this);
         switch (_hoverState)
         {
             case HoverState.Highlighted:

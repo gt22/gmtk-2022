@@ -210,8 +210,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -309,64 +309,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 8da2637367ef91d47a9c096997a43e14, type: 2}
---- !u!1 &254239242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 254239245}
-  - component: {fileID: 254239244}
-  - component: {fileID: 254239243}
-  m_Layer: 0
-  m_Name: VolcanoEruption
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &254239243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254239242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92c209c67d4bd24479f948bae57bd87e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &254239244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254239242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e9451510daf474b8e58193bd3b02b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnsUntilTrigger: 5
---- !u!4 &254239245
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254239242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3287618, y: 0.50059474, z: 76.274445}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414629190
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +396,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -517,6 +459,7 @@ GameObject:
   - component: {fileID: 446696188}
   - component: {fileID: 446696189}
   - component: {fileID: 446696190}
+  - component: {fileID: 446696191}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -728,6 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b193fc16d1f393243b44ce9932c3f7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showActionCard: 1
   defaultSprite: {fileID: 21300000, guid: 0e1be384cbfc49e448b78a3ccfc76db1, type: 3}
   selectedSprite: {fileID: 21300000, guid: 590775e261500fa4db1d7089661ba160, type: 3}
   hoverSprite: {fileID: 21300000, guid: 590775e261500fa4db1d7089661ba160, type: 3}
@@ -746,6 +690,21 @@ MonoBehaviour:
   manager: {fileID: 983932402}
   resourceGenerationType: 1
   resourceGenerateAmount: 2
+--- !u!114 &446696191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446696184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc4f2f8908df64e87cdb35ffa9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCardPrefab: {fileID: 8611051587374291530, guid: 547c6467178309e42ad537c6ec12b0f7, type: 3}
+  uiCardPlacement: {fileID: 595380252}
+  parentCanvas: {fileID: 2014711371}
 --- !u!1 &471755721
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +718,7 @@ GameObject:
   - component: {fileID: 471755723}
   - component: {fileID: 471755725}
   - component: {fileID: 471755726}
+  - component: {fileID: 471755727}
   m_Layer: 0
   m_Name: Big forest
   m_TagString: Untagged
@@ -793,6 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b193fc16d1f393243b44ce9932c3f7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showActionCard: 1
   defaultSprite: {fileID: 21300000, guid: aba77ccfd8f6be24db1c8844a4b845f5, type: 3}
   selectedSprite: {fileID: 21300000, guid: d038b71ec3fef5f45b46bd4e883945f8, type: 3}
   hoverSprite: {fileID: 21300000, guid: d038b71ec3fef5f45b46bd4e883945f8, type: 3}
@@ -1326,6 +1287,21 @@ MonoBehaviour:
   manager: {fileID: 983932402}
   resourceGenerationType: 2
   resourceGenerateAmount: 4
+--- !u!114 &471755727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471755721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc4f2f8908df64e87cdb35ffa9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCardPrefab: {fileID: 8611051587374291530, guid: 547c6467178309e42ad537c6ec12b0f7, type: 3}
+  uiCardPlacement: {fileID: 1216671786}
+  parentCanvas: {fileID: 2014711371}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1434,7 @@ GameObject:
   - component: {fileID: 579735512}
   - component: {fileID: 579735511}
   - component: {fileID: 579735513}
+  - component: {fileID: 579735514}
   m_Layer: 0
   m_Name: 'Volcano '
   m_TagString: Untagged
@@ -1844,6 +1821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b193fc16d1f393243b44ce9932c3f7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showActionCard: 1
   defaultSprite: {fileID: 21300000, guid: 83a6150302e1a0c48a8b522ddc42780d, type: 3}
   selectedSprite: {fileID: 21300000, guid: adb90444929a2dc4ebba44c78210d3e8, type: 3}
   hoverSprite: {fileID: 21300000, guid: adb90444929a2dc4ebba44c78210d3e8, type: 3}
@@ -1862,6 +1840,52 @@ MonoBehaviour:
   manager: {fileID: 983932402}
   resourceGenerationType: 0
   resourceGenerateAmount: 5
+--- !u!114 &579735514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579735507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc4f2f8908df64e87cdb35ffa9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCardPrefab: {fileID: 8611051587374291530, guid: 547c6467178309e42ad537c6ec12b0f7, type: 3}
+  uiCardPlacement: {fileID: 1635162066}
+  parentCanvas: {fileID: 2014711371}
+--- !u!1 &595380252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595380253}
+  m_Layer: 0
+  m_Name: CityUIPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595380253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595380252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -51, y: -7, z: -44.66043}
+  m_LocalScale: {x: 17.300001, y: 17.300001, z: 17.300001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014711372}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2010,7 @@ GameObject:
   - component: {fileID: 680181069}
   - component: {fileID: 680181071}
   - component: {fileID: 680181072}
+  - component: {fileID: 680181073}
   m_Layer: 0
   m_Name: Clouds
   m_TagString: Untagged
@@ -2020,6 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b193fc16d1f393243b44ce9932c3f7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showActionCard: 1
   defaultSprite: {fileID: 21300000, guid: 92ba6eb27007ac744a6b98dd92e417de, type: 3}
   selectedSprite: {fileID: 21300000, guid: a3361af5189150b4d9c23a43ff6e7b45, type: 3}
   hoverSprite: {fileID: 21300000, guid: a3361af5189150b4d9c23a43ff6e7b45, type: 3}
@@ -2252,6 +2278,21 @@ MonoBehaviour:
   manager: {fileID: 983932402}
   resourceGenerationType: 2
   resourceGenerateAmount: 1
+--- !u!114 &680181073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680181067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc4f2f8908df64e87cdb35ffa9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCardPrefab: {fileID: 8611051587374291530, guid: 547c6467178309e42ad537c6ec12b0f7, type: 3}
+  uiCardPlacement: {fileID: 2027377643}
+  parentCanvas: {fileID: 2014711371}
 --- !u!1 &864433412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,8 +2380,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2389,64 +2430,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864433412}
   m_CullTransparentMesh: 1
---- !u!1 &880753342
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 880753345}
-  - component: {fileID: 880753344}
-  - component: {fileID: 880753343}
-  m_Layer: 0
-  m_Name: OceanInvasion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &880753343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880753342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e0f24704451434bbb941619278234b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &880753344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880753342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e9451510daf474b8e58193bd3b02b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnsUntilTrigger: 3
---- !u!4 &880753345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880753342}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3287618, y: 0.50059474, z: 76.274445}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970557845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,7 +2613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983932398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2871,6 +2854,7 @@ GameObject:
   - component: {fileID: 1216317542}
   - component: {fileID: 1216317543}
   - component: {fileID: 1216317544}
+  - component: {fileID: 1216317545}
   m_Layer: 0
   m_Name: Ocean
   m_TagString: Untagged
@@ -2957,6 +2941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b193fc16d1f393243b44ce9932c3f7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showActionCard: 1
   defaultSprite: {fileID: 21300000, guid: 99812d2c2f523ea4290281bad9839e30, type: 3}
   selectedSprite: {fileID: 21300000, guid: 3443e0ec35c32734eaa6ea99aa3f24ba, type: 3}
   hoverSprite: {fileID: 21300000, guid: 3443e0ec35c32734eaa6ea99aa3f24ba, type: 3}
@@ -3162,6 +3147,83 @@ MonoBehaviour:
   manager: {fileID: 983932402}
   resourceGenerationType: 2
   resourceGenerateAmount: 3
+--- !u!114 &1216317545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216317539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc4f2f8908df64e87cdb35ffa9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCardPrefab: {fileID: 8611051587374291530, guid: 547c6467178309e42ad537c6ec12b0f7, type: 3}
+  uiCardPlacement: {fileID: 1422294132}
+  parentCanvas: {fileID: 2014711371}
+--- !u!1 &1216671786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216671787}
+  m_Layer: 0
+  m_Name: ForestUIPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216671787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216671786}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 103, y: 8, z: -44.66043}
+  m_LocalScale: {x: 17.300001, y: 17.300001, z: 17.300001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014711372}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1266663056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266663057}
+  m_Layer: 0
+  m_Name: MinesUIPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1266663057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266663056}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 214, y: 38, z: -44.66043}
+  m_LocalScale: {x: 17.300001, y: 17.300001, z: 17.300001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014711372}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286322350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,8 +3309,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3297,6 +3359,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286322350}
   m_CullTransparentMesh: 1
+--- !u!1 &1422294132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422294133}
+  m_Layer: 0
+  m_Name: OceanUIPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1422294133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422294132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -262, y: -145, z: -44.66043}
+  m_LocalScale: {x: 17.300001, y: 17.300001, z: 17.300001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014711372}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592501601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,8 +3477,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3521,8 +3614,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3571,6 +3664,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619937745}
   m_CullTransparentMesh: 1
+--- !u!1 &1635162066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635162067}
+  m_Layer: 0
+  m_Name: VolcanoUIPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635162067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635162066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 110, z: -44.66043}
+  m_LocalScale: {x: 17.300001, y: 17.300001, z: 17.300001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014711372}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1704959705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,6 +3911,7 @@ GameObject:
   - component: {fileID: 1905448898}
   - component: {fileID: 1905448899}
   - component: {fileID: 1905448900}
+  - component: {fileID: 1905448901}
   m_Layer: 0
   m_Name: Mines
   m_TagString: Untagged
@@ -3873,6 +3998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b193fc16d1f393243b44ce9932c3f7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showActionCard: 1
   defaultSprite: {fileID: 21300000, guid: b16f6ce0d812a4742894d24cc8ee337d, type: 3}
   selectedSprite: {fileID: 21300000, guid: e6c2e42d31589bc4b871a5cda60b9816, type: 3}
   hoverSprite: {fileID: 21300000, guid: e6c2e42d31589bc4b871a5cda60b9816, type: 3}
@@ -3959,6 +4085,21 @@ MonoBehaviour:
   manager: {fileID: 983932402}
   resourceGenerationType: 0
   resourceGenerateAmount: 2
+--- !u!114 &1905448901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905448895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2cc4f2f8908df64e87cdb35ffa9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCardPrefab: {fileID: 8611051587374291530, guid: 547c6467178309e42ad537c6ec12b0f7, type: 3}
+  uiCardPlacement: {fileID: 1266663056}
+  parentCanvas: {fileID: 2014711371}
 --- !u!1 &2014711368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,6 +4199,12 @@ RectTransform:
   - {fileID: 1619937746}
   - {fileID: 35890167}
   - {fileID: 970557846}
+  - {fileID: 1266663057}
+  - {fileID: 595380253}
+  - {fileID: 1635162067}
+  - {fileID: 1422294133}
+  - {fileID: 1216671787}
+  - {fileID: 2027377644}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4066,3 +4213,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2027377643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2027377644}
+  m_Layer: 0
+  m_Name: SkyUIPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2027377644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027377643}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 288, y: 44, z: -44.66043}
+  m_LocalScale: {x: 17.300001, y: 17.300001, z: 17.300001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014711372}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
