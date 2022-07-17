@@ -7,7 +7,7 @@ namespace GameSituations.CustomSituations
     {
         public void SituationEffects(IDice dice)
         {
-            Debug.Log("Ocean Invasion");
+            // Debug.Log("Ocean Invasion");
         }
     }
 }

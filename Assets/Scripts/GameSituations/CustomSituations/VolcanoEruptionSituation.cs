@@ -7,7 +7,7 @@ namespace GameSituations.CustomSituations
     {
         public void SituationEffects(IDice dice)
         {
-            Debug.Log("Volcano Eruption");
+            // Debug.Log("Volcano Eruption");
         }
     }
 }

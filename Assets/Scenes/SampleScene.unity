@@ -910,6 +910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 983932402}
+  situationDiceManager: {fileID: 983932404}
   resourceGenerationType: 1
   resourceGenerateAmount: 2
 --- !u!114 &446696191
@@ -1214,6 +1215,7 @@ GameObject:
   - component: {fileID: 471755727}
   - component: {fileID: 471755728}
   - component: {fileID: 471755729}
+  - component: {fileID: 471755730}
   m_Layer: 0
   m_Name: ForestAspect
   m_TagString: Untagged
@@ -1317,6 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 983932402}
+  situationDiceManager: {fileID: 983932404}
   resourceGenerationType: 2
   resourceGenerateAmount: 4
 --- !u!114 &471755727
@@ -1553,7 +1556,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleSituation:
-  - {fileID: 400272859225358598, guid: 7c8dfe4e4e7d9e847bddb61cabd96c6e, type: 3}
+  - {fileID: 8656783895573112985, guid: a88d37ece4a0544a394e316e14b36d8a, type: 3}
+--- !u!114 &471755730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471755721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe40d0aeed4acfb6b7bd3ccfb01124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 983932402}
+  situationDiceManager: {fileID: 983932404}
   resourceGenerationType: 0
   resourceGenerateAmount: 5
 --- !u!114 &579735514
@@ -2179,6 +2195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 983932402}
+  situationDiceManager: {fileID: 983932404}
   resourceGenerationType: 2
   resourceGenerateAmount: 1
 --- !u!114 &680181073
@@ -3305,6 +3322,7 @@ GameObject:
   - component: {fileID: 983932401}
   - component: {fileID: 983932402}
   - component: {fileID: 983932403}
+  - component: {fileID: 983932404}
   m_Layer: 0
   m_Name: = Environment
   m_TagString: Untagged
@@ -3389,6 +3407,18 @@ MonoBehaviour:
   manpowerText: {fileID: 864433414}
   materialsText: {fileID: 1619937747}
   suppliesText: {fileID: 35890168}
+--- !u!114 &983932404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983932398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f93d871571b4d0da9463f8248eb93b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1023754335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,6 +4002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 983932402}
+  situationDiceManager: {fileID: 983932404}
   resourceGenerationType: 2
   resourceGenerateAmount: 3
 --- !u!114 &1216317545
@@ -5487,6 +5518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 983932402}
+  situationDiceManager: {fileID: 983932404}
   resourceGenerationType: 0
   resourceGenerateAmount: 2
 --- !u!114 &1905448901
