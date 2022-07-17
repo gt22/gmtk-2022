@@ -1,3 +1,4 @@
+using Dice;
 using GameSituations;
 using Global;
 using Resources;
@@ -9,7 +10,11 @@ public class AspectScript : MonoBehaviour
     [FoldoutGroup("References"), SerializeField, ShowInInspector]
     private ResourceManager manager;
 
+    [FoldoutGroup("References"), SerializeField, ShowInInspector]
+    private SituationDiceManager situationDiceManager;
+    
     private AspectSituationController situationController;
+    private IDice situationDice;
 
     [FoldoutGroup("Resources")] public ResourceType resourceGenerationType;
 
@@ -43,12 +48,13 @@ public class AspectScript : MonoBehaviour
     private void AspectTurnBeginEffect()
     {
         //Debug.Log($"{gameObject.name}: TurnBeginEffect", this);
+        situationDice = situationDiceManager.RequestSituationDice();
         situationController.TurnUpdate();
     }
 
     private void AspectTurnEndEffects()
     {
-        situationController.NextSituation.SituationEffect();
+        situationController.NextSituation.SituationEffect(situationDice);
         AddResources();
     }
 }

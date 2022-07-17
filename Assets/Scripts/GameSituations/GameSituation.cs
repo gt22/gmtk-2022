@@ -1,3 +1,4 @@
+using Dice;
 using Global;
 using UnityEngine;
 
@@ -23,9 +24,9 @@ namespace GameSituations
             _turnsToTrigger--;
         }
 
-        public void SituationEffect()
+        public void SituationEffect(IDice dice)
         {
-            GetComponent<ICustomGameSituation>().SituationEffects();
+            GetComponent<ICustomGameSituation>().SituationEffects(dice);
         }
     }
 }
