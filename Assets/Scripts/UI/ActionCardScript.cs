@@ -1,3 +1,4 @@
+using TMPro;
 using UI.DragDrop;
 using UnityEngine;
 
@@ -9,6 +10,12 @@ namespace UI
         private CanvasGroup _diceCanvasGroup;
         private BoxCollider2D _cardCollider;
         private ItemSlot _diceSlot;
+
+        public TextMeshProUGUI titleText;
+        public TextMeshProUGUI descriptionText;
+
+        public void SetTitle(string s) => titleText.text = s;
+        public void SetDescription(string s) => descriptionText.text = s;
 
         private void Awake()
         {

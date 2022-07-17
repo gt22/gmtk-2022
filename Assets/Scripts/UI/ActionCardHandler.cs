@@ -5,56 +5,88 @@ namespace UI
 {
     public class ActionCardHandler : MonoBehaviour
     {
-        [Required, BoxGroup("References")] public GameObject uiCardPrefab;
-        [Required, BoxGroup("References")] public GameObject uiCardPlacement;
+        [Required, BoxGroup("ActionCard")] public GameObject uiCardPrefab;
+        [Required, BoxGroup("ActionCard")] public GameObject uiSituationCardPrefab;
+
+        [Required, BoxGroup("SituationCard")] public GameObject uiCardPlacement;
+        [Required, BoxGroup("SituationCard")] public GameObject uiSituationCardPlacement;
+
         [Required, BoxGroup("References")] public Canvas parentCanvas;
 
+        [FoldoutGroup("Card Content")] public string actionTitle;
+
+        [FoldoutGroup("Card Content"), TextArea]
+        public string actionDescription;
+
+        [FoldoutGroup("Card Content")] public string situationTitle;
+
+        [FoldoutGroup("Card Content"), TextArea]
+        public string situationDescription;
+
         [ShowInInspector, ReadOnly, FoldoutGroup("Debug")]
-        private GameObject _activeCard;
+        private GameObject _activeActionCard;
+
+        [ShowInInspector, ReadOnly, FoldoutGroup("Debug")]
+        private GameObject _activeSituationCard;
 
         private ActionCardScript _cardScript;
+        private ActionCardScript _situationCardScript;
 
         [ShowInInspector, ReadOnly, FoldoutGroup("Debug")]
-        private bool _cardSpawned = false;
+        private bool _cardsSpawned = false;
 
         private CanvasGroup _cardCg;
-        private BoxCollider2D _cardCollider;
+        private CanvasGroup _situationCardCg;
 
         private void SpawnCard()
         {
-            _activeCard = Instantiate(uiCardPrefab, uiCardPlacement.transform.position, Quaternion.identity);
-            _activeCard.transform.SetParent(parentCanvas.gameObject.transform, false);
-            _activeCard.transform.position = uiCardPlacement.transform.position;
-            //MoveUIObject(gameObject, _activeCard.GetComponent<RectTransform>());
-            _cardScript = _activeCard.GetComponent<ActionCardScript>();
+            // action card
+            _activeActionCard = Instantiate(uiCardPrefab, uiCardPlacement.transform.position, Quaternion.identity);
+            _activeActionCard.transform.SetParent(parentCanvas.gameObject.transform, false);
+            _activeActionCard.transform.position = uiCardPlacement.transform.position;
+            _cardScript = _activeActionCard.GetComponent<ActionCardScript>();
+            _cardScript.SetTitle(actionTitle);
+            _cardScript.SetDescription(actionDescription);
 
-            _cardSpawned = true;
-            _cardCg = _activeCard.GetComponent<CanvasGroup>();
-            _cardCollider = _activeCard.GetComponent<BoxCollider2D>();
+            // situation card
+            _activeSituationCard = Instantiate(uiSituationCardPrefab, uiSituationCardPlacement.transform.position,
+                Quaternion.identity);
+            _activeSituationCard.transform.SetParent(parentCanvas.gameObject.transform, false);
+            _activeSituationCard.transform.position = uiSituationCardPlacement.transform.position;
+            _situationCardScript = _activeSituationCard.GetComponent<ActionCardScript>();
+            _situationCardScript.SetTitle(situationTitle);
+            _situationCardScript.SetDescription(situationDescription);
 
-            _activeCard.transform.SetAsFirstSibling();
-            ShowCard();
+            _cardsSpawned = true;
+            _cardCg = _activeActionCard.GetComponent<CanvasGroup>();
+            _situationCardCg = _activeSituationCard.GetComponent<CanvasGroup>();
+
+            _activeActionCard.transform.SetAsFirstSibling();
+            _activeSituationCard.transform.SetAsFirstSibling();
+            ShowCards();
         }
 
 
         [Button]
-        public void ShowCard()
+        public void ShowCards()
         {
-            if (!_cardSpawned)
+            if (!_cardsSpawned)
             {
                 SpawnCard();
                 return;
             }
 
             _cardScript.Show();
+            _situationCardScript.Show();
         }
 
         [Button]
-        public void HideCard()
+        public void HideCards()
         {
-            if (_activeCard == null || _cardCg == null) return;
+            if (_activeActionCard == null || _cardCg == null || _situationCardCg == null) return;
 
             _cardScript.Hide();
+            _situationCardScript.Hide();
 
             //_activeCard.GetComponentInChildren<ItemSlot>().currentDice.GetComponent<CanvasGroup>().alpha = 0;
         }
