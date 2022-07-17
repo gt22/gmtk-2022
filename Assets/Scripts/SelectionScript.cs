@@ -87,7 +87,7 @@ public class SelectionScript : MonoBehaviour
         DisableSelectedOutline();
         _hoverState = HoverState.None;
 
-        if (showActionCard && _hasActionCard) _cardHandler.Hide();
+        if (showActionCard && _hasActionCard) _cardHandler.HideCard();
     }
 
     private void HandlePrev(GameObject prev)
@@ -107,7 +107,7 @@ public class SelectionScript : MonoBehaviour
         var previous = GlobalSelectablesController.Select(gameObject);
         HandlePrev(previous);
 
-        if (showActionCard && _hasActionCard) _cardHandler.Show();
+        if (showActionCard && _hasActionCard) _cardHandler.ShowCard();
     }
 
     public void _OnMouseClick()

@@ -12,6 +12,8 @@ namespace UI
         [ShowInInspector, ReadOnly, FoldoutGroup("Debug")]
         private GameObject _activeCard;
 
+        private ActionCardScript _cardScript;
+
         [ShowInInspector, ReadOnly, FoldoutGroup("Debug")]
         private bool _cardSpawned = false;
 
@@ -24,16 +26,19 @@ namespace UI
             _activeCard.transform.SetParent(parentCanvas.gameObject.transform, false);
             _activeCard.transform.position = uiCardPlacement.transform.position;
             //MoveUIObject(gameObject, _activeCard.GetComponent<RectTransform>());
+            _cardScript = _activeCard.GetComponent<ActionCardScript>();
 
             _cardSpawned = true;
             _cardCg = _activeCard.GetComponent<CanvasGroup>();
             _cardCollider = _activeCard.GetComponent<BoxCollider2D>();
-            Show();
+
+            _activeCard.transform.SetAsFirstSibling();
+            ShowCard();
         }
 
 
         [Button]
-        public void Show()
+        public void ShowCard()
         {
             if (!_cardSpawned)
             {
@@ -41,19 +46,17 @@ namespace UI
                 return;
             }
 
-            _cardCg.alpha = 1;
-            _cardCg.blocksRaycasts = true;
-            _cardCollider.enabled = true;
+            _cardScript.Show();
         }
 
         [Button]
-        public void Hide()
+        public void HideCard()
         {
             if (_activeCard == null || _cardCg == null) return;
 
-            _cardCg.alpha = 0;
-            _cardCg.blocksRaycasts = false;
-            _cardCollider.enabled = false;
+            _cardScript.Hide();
+
+            //_activeCard.GetComponentInChildren<ItemSlot>().currentDice.GetComponent<CanvasGroup>().alpha = 0;
         }
 
         //TODO why doesn't work
