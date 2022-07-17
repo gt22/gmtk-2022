@@ -6,7 +6,7 @@ namespace Effects
 {
     public class AspectEffectManager : MonoBehaviour
     {
-        private List<IEffect> _effects = new();
+        private List<IEffect> _effects = new List<IEffect>();
 
         public void AddEffect(IEffect effect)
         {
