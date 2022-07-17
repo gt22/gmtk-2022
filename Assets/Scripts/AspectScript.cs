@@ -13,7 +13,7 @@ public class AspectScript : MonoBehaviour
 
     [FoldoutGroup("References"), SerializeField, ShowInInspector]
     private SituationDiceManager situationDiceManager;
-    
+
     private AspectSituationController _situationController;
     private AspectEffectManager _effectManager;
     private IDice _situationDice;
@@ -46,9 +46,9 @@ public class AspectScript : MonoBehaviour
     {
         if (!_canGenerateResources) return;
         var income = resourceGenerationType.Stack(resourceGenerateAmount);
-        Debug.Log($"Income: {income}");
+        Debug.Log($"Income: {income}", this);
         _effectManager.Apply(income);
-        Debug.Log($"After effects: {income}");
+        Debug.Log($"After effects: {income}", this);
         manager.QueueIncome(income);
     }
 
@@ -61,7 +61,7 @@ public class AspectScript : MonoBehaviour
 
     private void AspectTurnEndEffects()
     {
-        _situationController.NextSituation.SituationEffect(_situationDice);
+        _situationController.NextSituation.SituationEffect(_situationDice, gameObject);
         AddResources();
     }
 }

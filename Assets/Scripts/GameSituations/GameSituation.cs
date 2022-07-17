@@ -24,9 +24,9 @@ namespace GameSituations
             _turnsToTrigger--;
         }
 
-        public void SituationEffect(IDice dice)
+        public void SituationEffect(IDice dice, GameObject from)
         {
-            GetComponent<ICustomGameSituation>().SituationEffects(dice);
+            GetComponent<ICustomGameSituation>().SituationEffects(dice, from);
         }
     }
 }

@@ -912,6 +912,7 @@ GameObject:
   - component: {fileID: 446696191}
   - component: {fileID: 446696192}
   - component: {fileID: 446696193}
+  - component: {fileID: 446696194}
   m_Layer: 0
   m_Name: CityAspect
   m_TagString: Untagged
@@ -1305,6 +1306,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSituation:
   - {fileID: 400272859225358598, guid: 7c8dfe4e4e7d9e847bddb61cabd96c6e, type: 3}
+--- !u!114 &446696194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446696184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe40d0aeed4acfb6b7bd3ccfb01124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471755721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1820,7 @@ GameObject:
   - component: {fileID: 579735514}
   - component: {fileID: 579735515}
   - component: {fileID: 579735516}
+  - component: {fileID: 579735517}
   m_Layer: 0
   m_Name: VolcanoAspect
   m_TagString: Untagged
@@ -2040,6 +2054,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSituation:
   - {fileID: 400272859225358598, guid: 7c8dfe4e4e7d9e847bddb61cabd96c6e, type: 3}
+--- !u!114 &579735517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579735507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe40d0aeed4acfb6b7bd3ccfb01124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &595380252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,6 +2223,7 @@ GameObject:
   - component: {fileID: 680181073}
   - component: {fileID: 680181074}
   - component: {fileID: 680181075}
+  - component: {fileID: 680181076}
   m_Layer: 0
   m_Name: SkyAspect
   m_TagString: Untagged
@@ -2604,6 +2631,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSituation:
   - {fileID: 400272859225358598, guid: 7c8dfe4e4e7d9e847bddb61cabd96c6e, type: 3}
+--- !u!114 &680181076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680181067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe40d0aeed4acfb6b7bd3ccfb01124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744944382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,6 +3857,7 @@ GameObject:
   - component: {fileID: 1216317544}
   - component: {fileID: 1216317545}
   - component: {fileID: 1216317546}
+  - component: {fileID: 1216317547}
   m_Layer: 0
   m_Name: OceanAspect
   m_TagString: Untagged
@@ -4140,6 +4180,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSituation:
   - {fileID: 400272859225358598, guid: 7c8dfe4e4e7d9e847bddb61cabd96c6e, type: 3}
+--- !u!114 &1216317547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216317539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe40d0aeed4acfb6b7bd3ccfb01124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1216671786
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,6 +5573,7 @@ GameObject:
   - component: {fileID: 1905448901}
   - component: {fileID: 1905448902}
   - component: {fileID: 1905448903}
+  - component: {fileID: 1905448904}
   m_Layer: 0
   m_Name: UndergrundAspect
   m_TagString: Untagged
@@ -5785,6 +5838,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSituation:
   - {fileID: 400272859225358598, guid: 7c8dfe4e4e7d9e847bddb61cabd96c6e, type: 3}
+--- !u!114 &1905448904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905448895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abe40d0aeed4acfb6b7bd3ccfb01124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2014711368
 GameObject:
   m_ObjectHideFlags: 0
