@@ -15,5 +15,10 @@ namespace Dice
         {
             return Random.Range(1, Sides + 1);
         }
+
+        public override string ToString()
+        {
+            return "d" + Sides;
+        }
     }
 }

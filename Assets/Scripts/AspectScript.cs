@@ -1,3 +1,5 @@
+using Dice;
+using Effects;
 using GameSituations;
 using Global;
 using Resources;
@@ -9,7 +11,12 @@ public class AspectScript : MonoBehaviour
     [FoldoutGroup("References"), SerializeField, ShowInInspector]
     private ResourceManager manager;
 
-    private AspectSituationController situationController;
+    [FoldoutGroup("References"), SerializeField, ShowInInspector]
+    private SituationDiceManager situationDiceManager;
+    
+    private AspectSituationController _situationController;
+    private AspectEffectManager _effectManager;
+    private IDice _situationDice;
 
     [FoldoutGroup("Resources")] public ResourceType resourceGenerationType;
 
@@ -23,7 +30,8 @@ public class AspectScript : MonoBehaviour
         //Debug.Log($"{gameObject.name}: OnEnable", this);
         TurnHandler.OnTurnBegin += AspectTurnBeginEffect;
         TurnHandler.OnTurnEnd += AspectTurnEndEffects;
-        situationController = GetComponent<AspectSituationController>();
+        _situationController = GetComponent<AspectSituationController>();
+        _effectManager = GetComponent<AspectEffectManager>();
     }
 
     private void OnDisable()
@@ -36,19 +44,24 @@ public class AspectScript : MonoBehaviour
 
     private void AddResources()
     {
-        if (_canGenerateResources)
-            manager.QueueIncome(resourceGenerationType.Stack(resourceGenerateAmount));
+        if (!_canGenerateResources) return;
+        var income = resourceGenerationType.Stack(resourceGenerateAmount);
+        Debug.Log($"Income: {income}");
+        _effectManager.Apply(income);
+        Debug.Log($"After effects: {income}");
+        manager.QueueIncome(income);
     }
 
     private void AspectTurnBeginEffect()
     {
         //Debug.Log($"{gameObject.name}: TurnBeginEffect", this);
-        situationController.TurnUpdate();
+        _situationDice = situationDiceManager.RequestSituationDice();
+        _situationController.TurnUpdate();
     }
 
     private void AspectTurnEndEffects()
     {
-        situationController.NextSituation.SituationEffect();
+        _situationController.NextSituation.SituationEffect(_situationDice);
         AddResources();
     }
 }
