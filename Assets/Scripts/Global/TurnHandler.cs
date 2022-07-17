@@ -6,8 +6,9 @@ namespace Global
 {
     public class TurnHandler : MonoBehaviour
     {
-        public bool callTurnBeginOnAwake = true;
+        public bool callTurnBeginOnStart = true;
         public bool callTurnBeginAfterEnd = true;
+        public bool logTurns = true;
 
         public static event Action OnBeforeTurnBegin;
         public static event Action OnTurnBegin;
@@ -16,9 +17,9 @@ namespace Global
 
         private bool _turnInProgress;
 
-        private void Awake()
+        private void Start()
         {
-            if (callTurnBeginOnAwake)
+            if (callTurnBeginOnStart)
                 BeginTurn();
         }
 
@@ -30,6 +31,8 @@ namespace Global
                 Debug.LogError("Turn is already in progress!", this);
                 return;
             }
+
+            if (logTurns) Debug.LogWarning("BeginTurn!");
 
             OnBeforeTurnBegin?.Invoke();
             OnTurnBegin?.Invoke();
@@ -44,6 +47,8 @@ namespace Global
                 Debug.LogError("Turn has not started yet!", this);
                 return;
             }
+
+            if (logTurns) Debug.LogWarning("EndTurn!");
 
             OnTurnEnd?.Invoke();
             OnAfterTurnEnd?.Invoke();

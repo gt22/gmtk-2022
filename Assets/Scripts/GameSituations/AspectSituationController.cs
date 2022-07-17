@@ -18,7 +18,7 @@ namespace GameSituations
         {
             NextSituation = _forcedSituations.FirstOrDefault(x => x.IsReady()) ??
                             possibleSituation[Random.Range(0, possibleSituation.Count)];
-            Debug.Log(NextSituation);
+            Debug.Log($"{gameObject.name}: {NextSituation}", this);
         }
 
         public void TurnUpdate()

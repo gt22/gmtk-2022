@@ -20,6 +20,7 @@ public class AspectScript : MonoBehaviour
 
     private void OnEnable()
     {
+        //Debug.Log($"{gameObject.name}: OnEnable", this);
         TurnHandler.OnTurnBegin += AspectTurnBeginEffect;
         TurnHandler.OnTurnEnd += AspectTurnEndEffects;
         situationController = GetComponent<AspectSituationController>();
@@ -27,6 +28,8 @@ public class AspectScript : MonoBehaviour
 
     private void OnDisable()
     {
+        //Debug.Log($"{gameObject.name}: OnDisable", this);
+
         TurnHandler.OnTurnEnd -= AspectTurnEndEffects;
         TurnHandler.OnTurnBegin -= AspectTurnBeginEffect;
     }
@@ -39,6 +42,7 @@ public class AspectScript : MonoBehaviour
 
     private void AspectTurnBeginEffect()
     {
+        //Debug.Log($"{gameObject.name}: TurnBeginEffect", this);
         situationController.TurnUpdate();
     }
 

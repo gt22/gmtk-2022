@@ -3359,8 +3359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd4146556274b458ae254590c69ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  callTurnBeginOnAwake: 1
+  callTurnBeginOnStart: 1
   callTurnBeginAfterEnd: 1
+  logTurns: 1
 --- !u!114 &983932402
 MonoBehaviour:
   m_ObjectHideFlags: 0
